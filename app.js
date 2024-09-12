@@ -1,17 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+const parent = React.createElement( "div", {id: "parent"}, [
+    React.createElement("div", {id: "child"},
+        [React.createElement("h1",{},"I am an h1 tag"),
+         React.createElement("h2",{},"I am an h2 tag"),
 
-const jsxHeading = (
-  <h1 className="head">
-    Namaste React using JSX 
-  </h1>);
-
-
-console.log(jsxHeading);
+        ]),
+    
+        React.createElement("div", {id: "child"},
+            [React.createElement("h1",{},"I am an h1 tag"),
+             React.createElement("h2",{},"I am an h2 tag"),
+    
+            ]),
+    ]);
+    
+    
+  console.log(parent);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(jsxHeading);
-
-
+root.render(parent);
     
